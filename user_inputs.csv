@@ -1,0 +1,3 @@
+GEOM_X,GEOM_Y
+cardinality,distribution,percentage,buffer,probability,digits,split_range,dither,seed,geometry,width,height,size,line_seg,format,affinematrix,dimensions,sampleQuantity
+100,uniform,,,,,,,900,box,,,,,csv,,2,10

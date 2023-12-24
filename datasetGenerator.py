@@ -31,6 +31,8 @@ def main(csv_file):
         parameter_names = next(csv_reader)
         
         for row in csv_reader:
+            print(row)
+
             # Create a dictionary of parameters using the parameter names
             params = {parameter_names[i]: row[i] for i in range(len(parameter_names))}
             
@@ -39,10 +41,6 @@ def main(csv_file):
 
             if len(sample_quantity) <= 0:
                 continue
-            
-            # Check if 'affinematrix' is null and replace it with the default value
-            if len(params.get('dimensions')) <= 0:
-                params['dimensions'] = "2"
             
             # Filter out parameters with a length of 0 or less
             params = {k: v for k, v in params.items() if v and len(v) > 0}
@@ -67,5 +65,5 @@ def main(csv_file):
                 params['seed'] = str(seed_value)
 
 if __name__ == "__main__":
-    csv_file = "/home/marco/Documents/user_inputs.csv"  # Replace with your CSV file name
+    csv_file = "/home/vboxuser/Documents/user_inputs.csv"  # Replace with your CSV file name
     main(csv_file)
